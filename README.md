@@ -5,10 +5,8 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 ### Examples
 
 + **A robot chases a white ball**
-![Cascade Classifiers Images](/output_images/cascade_classifier.png "A robot chases a white ball")   
-
-+ **Detect facial keypoint with a Convolutional Neural Network**
-![CNN Images](/output_images/cnn_persons.png "Detect facial keypoint with a Convolutional Neural Network")
+![CA robot chases a white ball](/go_chase_it_video.gif "A robot chases a white ball")   
+   
    
    
 ## Important files
