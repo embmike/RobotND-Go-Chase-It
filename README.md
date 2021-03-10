@@ -5,7 +5,7 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 ### Examples
 
 + **A robot chases a white ball**
-![CA robot chases a white ball](/go_chase_it_video.gif "A robot chases a white ball")   
+<img src='go_chase_it_video.gif' width=80% height=80% />   
    
    
    
