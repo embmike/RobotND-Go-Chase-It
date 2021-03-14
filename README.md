@@ -21,16 +21,52 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 
    
 ### File structure
-<img src="file_structure.PNG" width="60%" height="60%" /> 
+<img src="file_structure.PNG" width="65%" height="65%" /> 
 
     
 ## Installation and usage
-Clone the repository
+Create and initialize catcin_ws
 ```sh
 $ cd <your workspace folder>
+$ mkdir -p /<your workspace folder>/catkin_ws/src
+$ cd /<your workspace folder>/catkin_ws/src
+$ catkin_init_workspace
+```
+    
+Clone the repository
+```sh
 $ git clone https://github.com/embmike/RobotND-Go-Chase-It.git
 ```
     
+Build packages
+```sh
+$ cd /<your workspace folder>/catkin_ws
+$ catkin_make
+$ git clone https://github.com/embmike/RobotND-Go-Chase-It.git
+```
     
+Launch the robot inside the world
+```sh
+$ cd /<your workspace folder>/catkin_ws
+$ source devel/setup.bash
+$ roslaunch my_robot world.launch
+```
+In RViz open configuration: File > Oen Config > '/<your workspace folder>/src/my_robot.rviz' > Open
+
+Run drive_bot and process_image in a new terminal
+```sh
+$ cd /<your workspace folder>/catkin_ws
+$ source devel/setup.bash
+$ roslaunch ball_chaser ball_chaser.launch
+```  
+    
+Visualize in a new terminal
+```sh
+$ cd /<your workspace folder>/catkin_ws
+$ source devel/setup.bash
+$ rosrun rqt_image_view rqt_image_view 
+```
+Now place the white ball in the field of view of the robot's camera. The robot should now move in the direction of the ball
+       
 ## Licence
 This project is licensed under the terms of the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
