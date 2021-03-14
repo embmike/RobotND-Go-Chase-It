@@ -21,7 +21,7 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 
    
 ### File structure
-<img src="file_structure.PNG" width="65%" height="65%" /> 
+<img src="file_structure.PNG" width="60%" height="60%" /> 
 
     
 ## Installation and usage
