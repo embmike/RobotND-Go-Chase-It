@@ -51,7 +51,7 @@ $ cd /<your workspace folder>/catkin_ws
 $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
-In RViz open configuration: File > Open Config > ```/<your workspace folder>/src/my_robot.rviz > Open```
+In RViz open configuration: ```File > Open Config > /<your workspace folder>/src/my_robot.rviz > Open```
 
 Run drive_bot and process_image in a new terminal
 ```sh
