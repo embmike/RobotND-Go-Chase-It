@@ -7,7 +7,7 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 ### Examples
 
 + **A robot chases a white ball**
-<img src='go_chase_it_video.gif' width=80% height=80% />   
+<img src="go_chase_it_video.gif" width="80%" height="80%" />   
    
    
    
@@ -18,6 +18,10 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 - /ball_chaser/src/**process_image.cpp** : the ROS node that subscribe to the robot’s camera images and analyze them to determine the position of the white ball
 - /ball_chaser/srv/**DriveToTarget.srv**: the publishes messages containing the velocities for the wheel joints
 - /ball_chaser/**CMakeLists.txt** : the catkin make file
+
+   
+### File structure
+<img src="file_structure.PNG" width="60%" height="60%" /> 
 
     
 ## Installation and usage
