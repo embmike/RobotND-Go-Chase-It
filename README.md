@@ -27,7 +27,7 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 ## Installation and usage
 ***The application runs on Ubuntu with ROS installed.***
 
-Create and initialize catcin_ws
+Create and initialize catkin_ws
 ```sh
 $ cd <your workspace folder>
 $ mkdir -p /<your workspace folder>/catkin_ws/src
