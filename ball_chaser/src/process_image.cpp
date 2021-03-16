@@ -50,67 +50,67 @@ public:
         // Depending on the white ball position, call the drive_bot function and pass velocities to it
         // Request a stop when there's no white ball seen by the camera
         
-		const unsigned int white_pixel_rgb   {255*3};
+        const unsigned int white_pixel_rgb   {255*3};
         const unsigned int left_area_border  {img.width/3};
         const unsigned int right_area_border {(img.width/3)*2};
 
         unsigned int left_num   {0};
-		unsigned int middle_num {0};
+        unsigned int middle_num {0};
         unsigned int right_num  {0};
 
         unsigned int ball_pos {0};
         
 		
-		// 1 - Count the white pixels where they are [left_count, middle_count, right_count]
+        // 1 - Count the white pixels where they are [left_count, middle_count, right_count]
         for( unsigned int row = 0; row < img.height; row++ ) 
-		{
+        {
             for( unsigned int col = 0; col < img.width; col++ )
-			{
-				unsigned int index = row * img.step + col * 3;
+            {
+                unsigned int index = row * img.step + col * 3;
 
-				unsigned int r_pixel = img.data[index];
-				unsigned int g_pixel = img.data[index + 1];
-				unsigned int b_pixel = img.data[index + 2];
-    
-				if( (r_pixel + g_pixel + b_pixel) == white_pixel_rgb )
-				{
-					if( col <= left_area_border )
-					{
-						left_num++;
-					}
-					else if( col >= right_area_border )
-					{
-						right_num++;
-					}
-					else
-					{
-						middle_num++;
-					}
-				}
-			}
+                unsigned int r_pixel = img.data[index];
+                unsigned int g_pixel = img.data[index + 1];
+                unsigned int b_pixel = img.data[index + 2];
+
+                if( (r_pixel + g_pixel + b_pixel) == white_pixel_rgb )
+                {
+                    if( col <= left_area_border )
+                    {
+                        left_num++;
+                    }
+                    else if( col >= right_area_border )
+                    {
+                        right_num++;
+                    }
+                    else
+                    {
+                        middle_num++;
+                    }
+                }
+            }
         }
         
 		
-		// 2 - Ball pose [none, left, middle, right]
+        // 2 - Ball pose [none, left, middle, right]
         if( left_num > middle_num && left_num > right_num )
         {
             ball_pos = 1;
-			// White ball is left
+            // White ball is left
         }
         else if( middle_num > left_num && middle_num > right_num )
         {
             ball_pos = 2;
-			// White ball is in the middle
+            // White ball is in the middle
         }
         else if( right_num > left_num && right_num > middle_num )
         {
             ball_pos = 3;
-			// White ball is right
+            // White ball is right
         }
         else
         {
             ball_pos = 0;
-			// White ball is not in the image
+            // White ball is not in the image
         }
 
 
