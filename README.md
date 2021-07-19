@@ -8,6 +8,8 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 + **A robot chases a white ball**
 <img src="./media/go_chase_it_video.gif" width="80%" height="80%" />
 
+<br>
+
 ## Important files
 - /my_world/ : the ROS package with the roboter simulation
 - /ball_chaser/ : the ROS package with the source code
