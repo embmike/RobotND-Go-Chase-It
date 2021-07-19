@@ -3,9 +3,7 @@ A robot chases a white ball. The program runs in the robot simulation [Gazebo](h
     
 This project is part of my robotics nano degree of[ Udacity](https://www.udacity.com/course/robotics-software-engineer--nd209). 
 
-### Example
-
-+ **A robot chases a white ball**
+### Example: A robot chases a white ball
 <img src="./media/go_chase_it_video.gif" width="80%" height="80%" />
 
 <br>
