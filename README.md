@@ -3,13 +3,10 @@ A robot chases a white ball. The program runs in the robot simulation [Gazebo](h
     
 This project is part of my robotics nano degree of[ Udacity](https://www.udacity.com/course/robotics-software-engineer--nd209). 
 
-<br>
-
-### Examples
+### Example
 
 + **A robot chases a white ball**
 <img src="./media/go_chase_it_video.gif" width="80%" height="80%" />
-
 
 ## Important files
 - /my_world/ : the ROS package with the roboter simulation
@@ -18,8 +15,6 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 - /ball_chaser/src/**process_image.cpp** : the ROS node that subscribe to the robot’s camera images and analyze them to determine the position of the white ball
 - /ball_chaser/srv/**DriveToTarget.srv**: the publishes messages containing the velocities for the wheel joints
 - /ball_chaser/**CMakeLists.txt** : the catkin make file
-
-<br>
 
 ### Project tree
 <img src="./media/project_tree.PNG" width="70%" height="70%" /> 
