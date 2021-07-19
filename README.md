@@ -1,16 +1,16 @@
-# Robotics : GO Chase It!
-A robot chases a white ball. The program runs in the robot simulation [Gazebo](http://gazebosim.org/). The software is programmed in C++ and that uses the Robot Operating System [ROS]( https://www.ros.org/).    
+# Robotics : Go Chase It!
+A robot chases a white ball. The program runs in the robot simulation [Gazebo](http://gazebosim.org/). The software is programmed in C++ and uses the robot operating system [ROS]( https://www.ros.org/).
     
 This project is part of my robotics nano degree of[ Udacity](https://www.udacity.com/course/robotics-software-engineer--nd209). 
 
-    
+<br>
+
 ### Examples
 
 + **A robot chases a white ball**
-<img src="go_chase_it_video.gif" width="80%" height="80%" />   
-   
-   
-   
+<img src="./media/go_chase_it_video.gif" width="80%" height="80%" />
+
+
 ## Important files
 - /my_world/ : the ROS package with the roboter simulation
 - /ball_chaser/ : the ROS package with the source code
@@ -19,56 +19,38 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 - /ball_chaser/srv/**DriveToTarget.srv**: the publishes messages containing the velocities for the wheel joints
 - /ball_chaser/**CMakeLists.txt** : the catkin make file
 
-   
-### File structure
-<img src="file_structure.PNG" width="60%" height="60%" /> 
+<br>
 
-    
+### Project tree
+<img src="./media/project_tree.PNG" width="60%" height="60%" /> 
+
+<br>
+  
 ## Installation and usage
 ***The application runs on Ubuntu with ROS installed.***
 
-Create and initialize catkin_ws
-```sh
-$ cd <your workspace folder>
-$ mkdir -p /<your workspace folder>/catkin_ws/src
-$ cd /<your workspace folder>/catkin_ws/src
-$ catkin_init_workspace
-```
-    
 Clone the repository
 ```sh
+$ cd <your workspace folder>
 $ git clone https://github.com/embmike/RobotND-Go-Chase-It.git
 ```
-    
+ 
 Build packages
 ```sh
-$ cd /<your workspace folder>/catkin_ws
+$ cd /<your workspace folder>/RobotND-Go-Chase-It
 $ catkin_make
-$ git clone https://github.com/embmike/RobotND-Go-Chase-It.git
 ```
-    
-Launch the robot inside the world
+ 
+Launch the robot inside the world and run drive_bot and process_image
 ```sh
-$ cd /<your workspace folder>/catkin_ws
-$ source devel/setup.bash
-$ roslaunch my_robot world.launch
+$ cd /<your workspace folder>/RobotND-Go-Chase-It
+$ chmod +x cd ball_chaser.sh
+$ ./ball_chaser.sh
 ```
-In RViz open configuration: ```File > Open Config > /<your workspace folder>/src/my_robot.rviz > Open```
 
-Run drive_bot and process_image in a new terminal
-```sh
-$ cd /<your workspace folder>/catkin_ws
-$ source devel/setup.bash
-$ roslaunch ball_chaser ball_chaser.launch
-```  
-    
-Visualize in a new terminal
-```sh
-$ cd /<your workspace folder>/catkin_ws
-$ source devel/setup.bash
-$ rosrun rqt_image_view rqt_image_view 
-```
-Now place the white ball in the field of view of the robot's camera. The robot should now move in the direction of the ball
-       
+Now place the white ball in the field of view of the robot's camera. The robot should now move in the direction of the ball.
+
+<br>
+
 ## Licence
 This project is licensed under the terms of the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

@@ -4,6 +4,7 @@
 
   <!-- World File -->
   <arg name="world_file" default="$(find my_robot)/world/robot_office.world"/>
+  <arg name="rviz_config_file" default="$(find my_robot)/config/my_robot.rviz"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -34,6 +35,6 @@
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
   <!--launch rviz-->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config_file)"/>
 
 </launch>
